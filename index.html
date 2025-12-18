@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teatanic Café — Drown in Taste</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#c5a46d", "background-light": "#f7f7f7", "background-dark": "#0e0e0e", "slate-dark": "#1a202c", "slate-mid": "#4a5568"}, fontFamily: {display: "Spline Sans"}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}}}};</script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .section { scroll-margin-top: 96px; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.reveal-in { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-dark antialiased selection:bg-primary selection:text-black">
+  <!-- Navbar -->
+  <nav class="fixed top-0 z-50 w-full bg-white/85 backdrop-blur border-b border-slate-100">
+    <div class="px-6 lg:px-12 flex h-20 items-center justify-between max-w-[1440px] mx-auto">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo/png%20logo.png" alt="Teatanic Café Logo" class="h-12 w-auto" />
+        <span class="text-xl font-bold tracking-tight uppercase">Teatanic Café</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#home" class="text-sm font-medium hover:text-primary uppercase tracking-wide">Home</a>
+        <a href="#story" class="text-sm font-medium hover:text-primary uppercase tracking-wide">Story</a>
+        <a href="#menu" class="text-sm font-medium hover:text-primary uppercase tracking-wide">Menu</a>
+        <a href="#gallery" class="text-sm font-medium hover:text-primary uppercase tracking-wide">Gallery</a>
+        <a href="#contact" class="text-sm font-medium hover:text-primary uppercase tracking-wide">Contact</a>
+        <a href="#location" class="text-sm font-medium hover:text-primary uppercase tracking-wide">Location</a>
+      </div>
+      <a href="https://wa.me/923315801220?text=Hi%20Teatanic%20Cafe%20%E2%80%94%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener" class="hidden md:flex items-center justify-center h-10 px-6 bg-black text-white rounded-full text-sm font-bold hover:bg-slate-800 uppercase tracking-wide">Order Online</a>
+      <!-- Mobile -->
+      <button id="mobileToggle" class="md:hidden p-2 text-slate-800">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <div class="px-6 py-4 grid gap-3">
+        <a href="#home" class="py-2 hover:text-primary">Home</a>
+        <a href="#story" class="py-2 hover:text-primary">Story</a>
+        <a href="#menu" class="py-2 hover:text-primary">Menu</a>
+        <a href="#gallery" class="py-2 hover:text-primary">Gallery</a>
+        <a href="#contact" class="py-2 hover:text-primary">Contact</a>
+        <a href="#location" class="py-2 hover:text-primary">Location</a>
+        <a href="https://wa.me/923315801220" target="_blank" class="py-2 text-white bg-black rounded-full text-center">Order on WhatsApp</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="section relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-slate-900/90 z-10"></div>
+      <div class="w-full h-full bg-cover bg-center bg-fixed" style="background-image:url('assets/image/hero image.webp');"></div>
+    </div>
+    <div class="relative z-20 container mx-auto px-6 text-center text-white mt-20 reveal">
+      <div class="mb-6 mx-auto w-24 h-24 bg-white rounded-full flex items-center justify-center text-black shadow-[0_0_40px_rgba(255,255,255,0.35)]">
+        <img src="assets/logo/png%20logo.png" alt="Teatanic Café" class="h-14 w-14 object-contain" />
+      </div>
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-4 leading-[0.95] text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400">DROWN IN<br/>TASTE</h1>
+      <p class="text-lg md:text-2xl font-light text-slate-300 mb-6 tracking-widest uppercase">Depth of Coffee • Smoke of the Grill</p>
+      <p class="text-sm md:text-base text-slate-300 mb-10"><span class="font-semibold">Address:</span> <a class="underline hover:text-primary js-map-link" href="#" data-map>Ground Floor, Gulberg Pride, Gulberg Residencia Block D Markaz G11, Islamabad, Pakistan</a></p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="#menu" class="inline-flex items-center justify-center h-12 px-6 bg-primary text-black rounded-full text-sm font-bold hover:scale-105 transition-transform shadow-lg">View Menu<span class="material-symbols-outlined ml-2 text-xl">arrow_downward</span></a>
+        <a href="tel:+923315801220" class="inline-flex items-center justify-center h-12 px-6 bg-white/15 backdrop-blur text-white rounded-full text-sm font-bold hover:bg-white/25">Call Now</a>
+        <a class="inline-flex items-center justify-center h-12 px-6 bg-black text-white rounded-full text-sm font-bold hover:bg-slate-800 js-map-link" href="#" data-map>Get Directions</a>
+      </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/60 animate-bounce">
+      <span class="material-symbols-outlined">keyboard_double_arrow_down</span>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section id="story" class="section relative py-24 bg-white">
+    <div class="container mx-auto px-6 max-w-6xl reveal">
+      <div class="flex flex-col md:flex-row items-center gap-16">
+        <div class="w-full md:w-1/2">
+          <div class="relative rounded-xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+            <img src="assets/image/Gemini_Generated_Image_x905eox905eox905.png" alt="Charcoal grill appetizers" class="w-full h-[500px] object-cover" />
+            <div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider">Since 2023</div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 flex flex-col gap-6">
+          <div class="flex items-center gap-2 text-slate-500 font-bold tracking-widest uppercase text-sm">
+            <span class="w-8 h-[2px] bg-primary"></span>
+            The Voyage
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold leading-tight text-slate-900">Where Depth Meets <span class="text-slate-400 decoration-primary underline decoration-4 underline-offset-4">Smoke</span></h2>
+          <p class="text-lg text-slate-600 leading-relaxed">Teatanic Café isn't just a place to eat; it's an immersion. We've crafted a sophisticated blend of maritime history and modern culinary art. From our signature charcoal-grilled chicken that carries the scent of open fires to our deep-brewed coffee that rivals the dark abyss, every flavor is an adventure waiting to be discovered.</p>
+          <div class="grid grid-cols-2 gap-4 mt-4">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-3xl text-primary bg-black rounded-full p-2">outdoor_grill</span>
+              <div>
+                <h4 class="font-bold text-slate-900">Live Charcoal</h4>
+                <p class="text-sm text-slate-500">Authentic Smoky Flavor</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-3xl text-primary bg-black rounded-full p-2">coffee</span>
+              <div>
+                <h4 class="font-bold text-slate-900">Deep Brews</h4>
+                <p class="text-sm text-slate-500">Premium Arabica Beans</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Gallery -->
+  <section id="menu" class="section relative py-24 bg-background-light">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="text-center mb-12 reveal">
+        <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-4 uppercase tracking-tight">Our Menu</h2>
+        <p class="text-slate-500 max-w-2xl mx-auto">Explore our four signature categories. Tap to enlarge.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="group cursor-pointer relative rounded-2xl overflow-hidden shadow border border-slate-200 bg-white" data-full="assets/menu/appetizers.png">
+          <img src="assets/menu/appetizers.png" alt="Appetizers" class="w-full h-[340px] object-cover group-hover:scale-[1.02] transition-transform" />
+          <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+            <h3 class="text-white text-xl font-bold">Appetizers</h3>
+          </div>
+        </div>
+        <div class="group cursor-pointer relative rounded-2xl overflow-hidden shadow border border-slate-200 bg-white" data-full="assets/menu/Pizza.png">
+          <img src="assets/menu/Pizza.png" alt="Pizza" class="w-full h-[340px] object-cover group-hover:scale-[1.02] transition-transform" />
+          <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+            <h3 class="text-white text-xl font-bold">Pizza</h3>
+          </div>
+        </div>
+        <div class="group cursor-pointer relative rounded-2xl overflow-hidden shadow border border-slate-200 bg-white" data-full="assets/menu/Main%20course.png">
+          <img src="assets/menu/Main%20course.png" alt="Main Course" class="w-full h-[340px] object-cover group-hover:scale-[1.02] transition-transform" />
+          <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+            <h3 class="text-white text-xl font-bold">Main Course</h3>
+          </div>
+        </div>
+        <div class="group cursor-pointer relative rounded-2xl overflow-hidden shadow border border-slate-200 bg-white" data-full="assets/menu/desserts.png">
+          <img src="assets/menu/desserts.png" alt="Desserts" class="w-full h-[340px] object-cover group-hover:scale-[1.02] transition-transform" />
+          <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+            <h3 class="text-white text-xl font-bold">Desserts</h3>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-10 reveal">
+        <a href="#contact" class="inline-flex items-center justify-center h-12 px-6 bg-black text-white rounded-full text-sm font-bold hover:bg-slate-800">Book a Table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery (uses menu images) -->
+  <section id="gallery" class="section py-24 bg-white">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="text-center mb-12 reveal">
+        <h2 class="text-4xl md:text-5xl font-black text-slate-900">Gallery</h2>
+        <p class="text-slate-500">A peek at our vibes and plates.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+        <img src="assets/gallery/gallery%20photo%201.webp" alt="Teatanic Café — Gallery 1" class="rounded-xl shadow" />
+        <img src="assets/gallery/gallery%20photo2.webp" alt="Teatanic Café — Gallery 2" class="rounded-xl shadow" />
+        <img src="assets/gallery/gallery%20photo3.webp" alt="Teatanic Café — Gallery 3" class="rounded-xl shadow" />
+        <img src="assets/gallery/gallery%20photo4.jpg" alt="Teatanic Café — Gallery 4" class="rounded-xl shadow" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section bg-background-light py-24">
+    <div class="container mx-auto px-6 max-w-6xl reveal">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-4xl font-black text-slate-900 mb-6">Contact Us</h2>
+          <ul class="space-y-4 text-slate-700">
+            <li class="flex items-start gap-3"><span class="material-symbols-outlined text-slate-600">call</span> <a href="tel:+923315801220" class="hover:text-primary font-semibold">+92 331 5801220</a></li>
+            <li class="flex items-start gap-3"><span class="material-symbols-outlined text-slate-600">mail</span> <a href="mailto:teataniccafe@gmail.com" class="hover:text-primary font-semibold">teataniccafe@gmail.com</a></li>
+            <li class="flex items-start gap-3"><span class="material-symbols-outlined text-slate-600">location_on</span> <a href="#" class="hover:text-primary font-semibold js-map-link" data-map>Ground Floor, Gulberg Pride, Gulberg Residencia Block D Markaz G11, Islamabad, Pakistan</a></li>
+          </ul>
+          <div class="flex gap-3 mt-6">
+            <a href="https://wa.me/923315801220" target="_blank" class="inline-flex items-center gap-2 px-5 h-11 bg-black text-white rounded-full"><span class="material-symbols-outlined">chat</span> WhatsApp</a>
+            <a href="#" class="inline-flex items-center gap-2 px-5 h-11 bg-primary text-black rounded-full js-map-link" data-map><span class="material-symbols-outlined">near_me</span> Get Directions</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow border border-slate-200 p-6">
+          <h3 class="text-xl font-bold mb-4">Quick Message</h3>
+          <form action="mailto:teataniccafe@gmail.com" method="post" enctype="text/plain" class="grid gap-4">
+            <input type="text" name="name" placeholder="Your Name" class="rounded-xl" required />
+            <input type="email" name="email" placeholder="Your Email" class="rounded-xl" required />
+            <textarea name="message" placeholder="Your Message" rows="4" class="rounded-xl" required></textarea>
+            <div class="flex gap-3">
+              <button type="submit" class="h-11 px-6 bg-black text-white rounded-full">Send Email</button>
+              <a href="tel:+923315801220" class="h-11 px-6 bg-white border border-slate-300 rounded-full flex items-center">Call Now</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section id="location" class="section bg-white py-24">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex flex-col lg:flex-row gap-12 items-start reveal">
+        <div class="lg:w-2/3 w-full rounded-2xl overflow-hidden border border-slate-200 shadow relative">
+          <a href="#" class="absolute inset-0 z-20 js-map-link" data-map aria-label="Open in Google Maps"></a>
+          <iframe title="Teatanic Cafe Location" class="w-full h-[380px]" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Ground%20Floor,%20Gulberg%20Pride,%20Gulberg%20Residencia%20Block%20D%20Markaz%20G11,%20Islamabad,%20Pakistan&output=embed"></iframe>
+        </div>
+        <div class="flex-1">
+          <h2 class="text-3xl font-black text-slate-900 mb-4">Visit Us</h2>
+          <p class="text-slate-600 mb-4">Ground Floor, Gulberg Pride, Gulberg Residencia Block D Markaz G11, Islamabad, Pakistan</p>
+          <div class="flex gap-3">
+            <a href="#" class="inline-flex items-center gap-2 px-5 h-11 bg-primary text-black rounded-full js-map-link" data-map><span class="material-symbols-outlined">near_me</span> Open in Maps</a>
+            <a href="tel:+923315801220" class="inline-flex items-center gap-2 px-5 h-11 bg-black text-white rounded-full"><span class="material-symbols-outlined">call</span> Call</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white pt-16 pb-8" id="visit">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex flex-col lg:flex-row gap-12">
+        <div class="lg:w-1/3 flex flex-col gap-6">
+          <div class="flex items-center gap-3">
+            <img src="assets/logo/png%20logo.png" alt="Teatanic Café" class="h-10 w-auto" />
+            <h3 class="text-2xl font-bold uppercase tracking-wide">Teatanic Café</h3>
+          </div>
+          <p class="text-slate-400">Drop your anchor at Teatanic. We bring the ocean's calm and the grill's heat to your table.</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3"><span class="material-symbols-outlined text-slate-500">location_on</span> <a href="#" class="hover:text-primary js-map-link" data-map>Ground Floor, Gulberg Pride, Gulberg Residencia Block D Markaz G11, Islamabad, Pakistan</a></li>
+            <li class="flex items-start gap-3"><span class="material-symbols-outlined text-slate-500">schedule</span> Mon - Sun: 11:00 AM - 11:00 PM</li>
+            <li class="flex items-start gap-3"><span class="material-symbols-outlined text-slate-500">call</span> <a href="tel:+923315801220" class="hover:text-primary">+92 331 5801220</a></li>
+            <li class="flex items-start gap-3"><span class="material-symbols-outlined text-slate-500">mail</span> <a href="mailto:teataniccafe@gmail.com" class="hover:text-primary">teataniccafe@gmail.com</a></li>
+          </ul>
+          <div class="flex gap-4 mt-4">
+            <a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-black" href="https://wa.me/923315801220" target="_blank" aria-label="WhatsApp"><span class="material-symbols-outlined text-xl">chat</span></a>
+            <a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-black" href="#" aria-label="Get Directions" class="js-map-link" data-map><span class="material-symbols-outlined text-xl">near_me</span></a>
+          </div>
+        </div>
+        <div class="lg:w-2/3 h-72 rounded-2xl overflow-hidden bg-slate-800 relative">
+          <a href="#" class="absolute inset-0 z-10 js-map-link" data-map></a>
+          <iframe title="Teatanic Cafe Map" class="w-full h-full" style="border:0" loading="lazy" src="https://www.google.com/maps?q=Ground%20Floor,%20Gulberg%20Pride,%20Gulberg%20Residencia%20Block%20D%20Markaz%20G11,%20Islamabad,%20Pakistan&output=embed"></iframe>
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div class="bg-primary text-black px-4 py-2 rounded-full font-bold text-sm shadow-xl flex items-center gap-2"><span class="material-symbols-outlined text-lg">near_me</span> Get Directions</div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-slate-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
+        <p>© 2023 Teatanic Café. All rights reserved.</p>
+        <div class="flex gap-6 mt-4 md:mt-0">
+          <a class="hover:text-white" href="#menu">Menu</a>
+          <a class="hover:text-white" href="#contact">Contact</a>
+          <a class="hover:text-white js-map-link" href="#" data-map>Directions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-[60]">
+    <button id="lightboxClose" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/10 text-white backdrop-blur flex items-center justify-center"><span class="material-symbols-outlined">close</span></button>
+    <img id="lightboxImg" src="" alt="Menu item" class="max-w-[90vw] max-h-[80vh] rounded-xl shadow-2xl" />
+  </div>
+
+  <script>
+    const addressText = 'Ground Floor, Gulberg Pride, Gulberg Residencia Block D Markaz G11, Islamabad, Pakistan';
+    const mapUrl = 'https://www.google.com/maps?q=' + encodeURIComponent(addressText);
+
+    // Map link wiring
+    document.querySelectorAll('.js-map-link').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open(mapUrl, '_blank');
+      });
+    });
+
+    // Mobile nav toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    mobileToggle?.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('reveal-in');
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+    document.querySelectorAll('#menu .group').forEach(card => {
+      card.addEventListener('click', () => {
+        const src = card.getAttribute('data-full');
+        if (src) {
+          lightboxImg.src = src;
+          lightbox.classList.remove('hidden');
+          lightbox.classList.add('flex');
+        }
+      });
+    });
+    lightboxClose.addEventListener('click', () => {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      lightboxImg.src = '';
+    });
+  </script>
+</body>
+</html>
